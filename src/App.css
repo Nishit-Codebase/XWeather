@@ -1,0 +1,15 @@
+#DataBlocks{
+  display: Flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+#Box{
+  border: solid;
+  height: 5rem;
+  width: 10rem;
+  align-content: center;
+  text-align: center;
+  
+}
