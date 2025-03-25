@@ -1,4 +1,4 @@
-#DataBlocks{
+.weather-cards{
   display: Flex;
   flex-direction: row;
   gap: 20px;

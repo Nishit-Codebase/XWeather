@@ -31,6 +31,7 @@ function App() {
   return (
     <>
       <input
+        type="text"
         style={{ marginLeft: "30rem", marginTop: "10rem" }}
         onChange={handleInputChange}
         placeholder="Enter city name"
@@ -43,20 +44,20 @@ function App() {
       </button>
 
       {weather && (
-        <div id="DataBlocks">
-          <div id="Box">
+        <div className="weather-cards">
+          <div id="Box" className="weather-card">
             <b>Temperature</b>
             <p>{weather.temp_c}°C</p>
           </div>
-          <div id="Box">
+          <div id="Box" className="weather-card">
             <b>Humidity</b>
             <p>{weather.humidity}%</p>
           </div>
-          <div id="Box">
+          <div id="Box" className="weather-card">
             <b>Condition</b>
             <p>{weather.condition.text}</p>
           </div>
-          <div id="Box">
+          <div id="Box" className="weather-card">
             <b>Wind Speed</b>
             <p>{weather.wind_kph} kph</p>
           </div>
