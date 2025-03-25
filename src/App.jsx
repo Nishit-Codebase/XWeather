@@ -4,6 +4,8 @@ import "./App.css";
 function App() {
   const [State, setState] = useState("");
   const [weather, setWeather] = useState(null); 
+  const [loading, setLoading] = useState(false); 
+
 
   const handleInputChange = (e) => {
     setState(e.target.value);
@@ -11,6 +13,8 @@ function App() {
 
   const fetchWeather = async () => {
     if (!State) return; 
+
+    setLoading(true);
 
     try {
       let response = await fetch(
@@ -26,6 +30,7 @@ function App() {
     } catch (e) {
       console.error("Error fetching weather data:", e);
     }
+    setLoading(false); 
   };
 
   return (
@@ -42,6 +47,8 @@ function App() {
       >
         Search
       </button>
+
+      {loading && <p>Loading data...</p>}
 
       {weather && (
         <div className="weather-cards">
